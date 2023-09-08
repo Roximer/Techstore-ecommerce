@@ -1,10 +1,12 @@
 import { Producto,User} from "./clases.js";
-// import { save_users } from "./registro.js";
-const myModal = new bootstrap.Modal(document.getElementById('myModal'))
+
+const myModal =new bootstrap.Modal(document.getElementById('myModal'));
+
+
 
 let productos = JSON.parse(localStorage.getItem('productos'))||[] ;
 // localStorage.removeItem('productos');
-
+// localStorage.removeItem('users');
 let auth = JSON.parse(localStorage.getItem('auth')) || null;
 let contenido = document.getElementById('main');
 let btnClose = document.getElementById('logOut');
@@ -15,7 +17,7 @@ if(!auth){
     let mensaje = document.createElement('div');
     mensaje.classList = "alert alert-danger pt-5 mt-4";
     mensaje.role = "alert";
-    mensaje.innerHTML=`<i class="bi bi-exclamation-triangle-fill"></i> No tienes accesso a esta página, haz click <a href="/Pages/registro.html" class="alert-link">Aquí para registrarte.</a>`
+    mensaje.innerHTML=`<i class="bi bi-exclamation-triangle-fill"></i> No tienes accesso a esta página, haz click <a href="/Pages/login.html" class="alert-link">Aquí para iniciar sesión.</a>`
     contenido.append(mensaje);
 }
 
@@ -35,8 +37,8 @@ window.guardar_datos = (event)=>{
     let nuevo_producto = new Producto(nombre,categoria,img,stock,precio,codigo,marca,descrip);
     productos.push(nuevo_producto);
     localStorage.setItem('productos',JSON.stringify(productos));
-    myModal.hide();
     document.getElementById('myFormAddProd').reset();
+    myModal.hide();
     cargar_tabla();
     
 }
@@ -50,7 +52,7 @@ window.cargar_tabla = ()=>{
         let celda = `<td>${producto.nombre}</td>
         <td>${producto.categoria}</td>
         <td>${producto.stock}</td>
-        <td>${producto.precio}</td>
+        <td>$ ${producto.precio}</td>
         <td>${producto.codigo}</td>
         <td>${producto.marca}</td>
         <td>${producto.descrip}</td>
@@ -147,46 +149,51 @@ btnClose.addEventListener('click',cerrarSesion);
 // **********aqui comienza lo de registro de usuarios:
 
 
+// creando tabla usuarios:
 let all_users =JSON.parse(localStorage.getItem('users')) ||[];
 
-const save_users=(event)=>{
+window.save_users=(event)=>{
     event.preventDefault();
     let user_name = document.getElementById('newUser').value;
     let user_email = document.getElementById('newEmail').value;
     let user_pass = document.getElementById('newPass').value;
-    let user_nn = new User (user_name,user_email,user_pass);
+    let user_nn = new User(user_name,user_email,user_pass);
     all_users.push(user_nn);
     localStorage.setItem('users',JSON.stringify(all_users));
     document.querySelector('form').reset();
-    cargar_tabla_usuarios()
+    cargar_tabla_usuarios();
 }
 
-// document.getElementById('formRegister').addEventListener('submit',save_users);
 
-// creando tabla usuarios:
-let tableUsers = document.getElementById('tableUsers');
-function cargar_tabla_usuarios(){
+const cargar_tabla_usuarios=()=>{
+    let tableUsers = document.getElementById('tableUsers');
     tableUsers.innerHTML = "";
     all_users.forEach((user,index)=>{
         let filaUser = document.createElement('tr');
-        let celdaUser = `<td>${user.userName}</td>
+        filaUser.innerHTML= `<td>${user.userName}</td>
         <td>${user.userEmail}</td>
-        <td ><button class="btn btn-danger fw-bold my-2 me-2" onclick="userDelete(${index})"><i class="bi bi-trash3-fill"></i> </button></td>`
-        filaUser.innerHTML=celdaUser;
+        <td ><button class="btn btn-danger" onclick="userDelete(${index})"><i class="bi bi-x-lg"></i> </button></td>`
         tableUsers.appendChild(filaUser);
     })
 }
+cargar_tabla_usuarios();
 
 
-// window.userDelete = (index)=>{
-// let userValidate = confirm(`Desea eliminar al usuario:${all_users[index].userName.toUpperCase()} \n email:${all_users[index].userEmail.toUpperCase()}`);
-// if(userValidate){
-//     all_users.splice(index,1);
-//     alert('El usuario ha sido eliminado de la lista.');
-//     localStorage.setItem('users',JSON.stringify(all_users));
-//     tablaUsuarios();
-// }
-// }
+
+
+
+window.userDelete = (index) => {
+    let userValidate = confirm(`¿Desea eliminar al usuario: ${all_users[index].userName.toUpperCase()} \n Email: ${all_users[index].userEmail.toUpperCase()}`);
+    if (userValidate) {
+        all_users.splice(index, 1);
+        localStorage.setItem('users',JSON.stringify(all_users));
+        alert('El usuario ha sido eliminado de la lista.');
+        cargar_tabla_usuarios();
+    }
+}
+
+
+
 
 
 
