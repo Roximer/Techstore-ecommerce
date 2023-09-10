@@ -1,7 +1,6 @@
-import { Producto,User} from "./clases.js";
+import { Producto} from "./clases.js";
 
 const myModal =new bootstrap.Modal(document.getElementById('myModal'));
-
 
 
 let productos = JSON.parse(localStorage.getItem('productos'))||[] ;
@@ -10,6 +9,7 @@ let productos = JSON.parse(localStorage.getItem('productos'))||[] ;
 let auth = JSON.parse(localStorage.getItem('auth')) || null;
 let contenido = document.getElementById('main');
 let btnClose = document.getElementById('logOut');
+
 
 if(!auth){
     btnClose.className="d-none";
@@ -146,56 +146,12 @@ const cerrarSesion = ()=>{
 
 btnClose.addEventListener('click',cerrarSesion);
 
-// **********aqui comienza lo de registro de usuarios:
-
-
-// creando tabla usuarios:
-let all_users =JSON.parse(localStorage.getItem('users')) ||[];
-
-window.save_users=(event)=>{
+// mensajes footer:
+window.suscrip =(event)=>{
     event.preventDefault();
-    let user_name = document.getElementById('newUser').value;
-    let user_email = document.getElementById('newEmail').value;
-    let user_pass = document.getElementById('newPass').value;
-    let user_nn = new User(user_name,user_email,user_pass);
-    all_users.push(user_nn);
-    localStorage.setItem('users',JSON.stringify(all_users));
-    document.querySelector('form').reset();
-    cargar_tabla_usuarios();
+    alert ('Gracias por suscribirte 😊')
 }
 
-
-const cargar_tabla_usuarios=()=>{
-    let tableUsers = document.getElementById('tableUsers');
-    tableUsers.innerHTML = "";
-    all_users.forEach((user,index)=>{
-        let filaUser = document.createElement('tr');
-        filaUser.innerHTML= `<td>${user.userName}</td>
-        <td>${user.userEmail}</td>
-        <td ><button class="btn btn-danger" onclick="userDelete(${index})"><i class="bi bi-x-lg"></i> </button></td>`
-        tableUsers.appendChild(filaUser);
-    })
+window.arrepentimiento=()=>{
+    confirm('Seguro que te arrepientes??🤔');
 }
-cargar_tabla_usuarios();
-
-
-
-
-
-window.userDelete = (index) => {
-    let userValidate = confirm(`¿Desea eliminar al usuario: ${all_users[index].userName.toUpperCase()} \n Email: ${all_users[index].userEmail.toUpperCase()}`);
-    if (userValidate) {
-        all_users.splice(index, 1);
-        localStorage.setItem('users',JSON.stringify(all_users));
-        alert('El usuario ha sido eliminado de la lista.');
-        cargar_tabla_usuarios();
-    }
-}
-
-
-
-
-
-
-
-

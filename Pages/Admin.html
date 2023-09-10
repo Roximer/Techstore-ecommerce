@@ -36,10 +36,7 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-evenly flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#usuariosVer">Usuarios</a>
+                                <a class="nav-link active fw-bold" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
                                 <form class="  d-grid" id="form-buscador">
@@ -69,7 +66,7 @@
 
     <!-- Inicio de administrador -->
     <main id="main">
-        <h1 class="text-center text-light mt-5 mb-4 p-4">Administración</h1>
+        <h1 class="text-center text-danger-emphasis mt-5 mb-4 p-4">Administración</h1>
         <div class="container-fluid">
             <div class="row">
                 <div>
@@ -94,17 +91,11 @@
                                             <input type="text" class="form-control" minlength="5" maxlength="50"
                                                 id="nombre" required>
                                             <label class="fw-bold ms-2">nombre</label>
-                                            <!-- <div class="invalid-feedback">
-                        Debes ingresar el nombre del producto.
-                    </div> -->
                                         </div>
                                         <div class="form-floating col-12 col-lg-6 mb-3">
                                             <input type="text" class="form-control" minlength="5" maxlength="20"
                                                 id="categoria" required>
                                             <label class="fw-bold ms-2">categoría</label>
-                                            <!-- <div class="invalid-feedback">
-                        Debes ingresar la categoria del producto.
-                    </div> -->
                                         </div>
                                         <div class="form-floating col-12 col-lg-6 mb-3">
                                             <input type="text" class="form-control" id="img" required>
@@ -114,41 +105,26 @@
                                             <input type="number" class="form-control" min="1" max="1000" id="stock"
                                                 required>
                                             <label class="fw-bold ms-2">stock</label>
-                                            <!-- <div class="invalid-feedback">
-                        el valor debe ser menor o igual a 1000.
-                    </div> -->
                                         </div>
                                         <div class="form-floating col-12 col-lg-3 mb-3">
                                             <input type="text" minlength="4" maxlength="50" class="form-control"
                                                 id="precio" required>
                                             <label class="fw-bold ms-2">precio</label>
-                                            <!-- <div class="invalid-feedback">
-                        Precio.
-                    </div> -->
                                         </div>
                                         <div class="form-floating col-12 col-lg-6 mb-3">
                                             <input type="number" min="001" max="100" class="form-control"
                                                 id="codigo" required>
                                             <label class="fw-bold ms-2">código</label>
-                                            <!-- <div class="invalid-feedback">
-                        código del producto.
-                    </div> -->
                                         </div>
                                         <div class="form-floating col-12 mb-3 col-lg-6 column-gap-lg-4 ">
                                             <input type="text" class="form-control" minlength="2" maxlength="20"
                                                 id="marca" required>
                                             <label class="fw-bold ms-2">marca</label>
-                                            <!-- <div class="invalid-feedback">
-                        Marca.
-                    </div> -->
                                         </div>
                                         <div class="form-floating  col-12">
                                             <textarea class="form-control" minlength="5" maxlength="100"
                                                 id="descripcion" required></textarea>
                                             <label class="fw-bold ms-2">Descripción</label>
-                                            <!-- <div class="invalid-feedback">
-                        Agregar descripción.
-                    </div> -->
                                         </div>
                                         <div class="d-flex justify-content-end my-2">
                                             <button class="btn btn-info fw-bold text-danger">agregar</button>
@@ -161,13 +137,6 @@
                 </div>
             </div>
         </div>
-        <!-- el buscador -->
-        <!-- <form class="col-10 m-auto col-lg-4" id="form-buscador" >
-        <div class=" input-group ">
-            <input type="input" class="form-control" id="buscador" name="busq" placeholder="Buscar producto" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-secondary" type="button" onclick="buscadorProd()"  id="button-addon2"><i class="bi bi-search"></i></button>
-          </div>
-    </form> -->
 
         <!-- ***************************** -->
         <div class="container-fluid">
@@ -242,34 +211,13 @@
                 </div>
             </div>
         </div>
-
-
-        <section>
-            <hr class="border border-5 border-danger-subtle opacity-100 my-5">
-            <div class="container" id="usuariosVer">
-                <h2 class="text-center text-light">Usuarios registrados</h2>
-                <div class="table-responsive-md">
-                    <table class="table text-center mb-5 table-striped border-danger-subtle table-danger table-hover mt-3">
-                        <thead>
-                            <tr>
-                                <th scope="col">Usuario</th>
-                                <th>Email</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableUsers">
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
     </main>
 
 
 
 
 
-    <footer class=" text-light  pt-3 pb-4">
+    <footer class=" text-light mt-5 pt-3 pb-4">
         <div class="container  text-center text-md-start" >
         <div class="row text-center text-md-start">
             <div class="col-md-2 mx-auto mt-3">
@@ -281,13 +229,13 @@
                 <p class="fs-5"><i class="bi bi-geo-alt-fill"></i> Avda Los Aromos 1091</p>
                 <p class="fs-5"><i class="bi bi-telephone-fill"></i> 0800-999-800</p>
                 <p class="fs-5"><i class="bi bi-envelope-fill"></i> www.techStore.com</p>
-                <button class="btn btn-danger my-2 fw-semibold">Boton de arrepentimiento</button>
+                <button class="btn btn-danger my-2 fw-semibold" onclick="arrepentimiento()">Boton de arrepentimiento</button>
             </div>
             <div class="col-md-3 mx-auto mt-3">
                 <h5 class="text-uppercase fw-bold mb-4 mt-3">newsletter</h5>
                 <hr class="mb-4">
                 <p class="fs-5 mb-2">¡Suscríbete para recibir nuestras ofertas!</p>
-                <form >
+                <form onclick="suscrip(event)">
                     <input type="email" class="form-control mt-4"  placeholder="Ingresa tu email">
                     <div class="d-grid mt-2">
                         <button class="btn btn-secondary fw-semibold">¡suscribete!</button>
@@ -305,11 +253,11 @@
         <hr class="my-5">
         <div class="row text-center">
             <ul class="list-unstyled  list-inline">
-                <li class="list-inline-item"><a href="#"><i class="redes bi bi-facebook"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="redes bi bi-instagram "></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="redes bi bi-twitter "></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="redes bi bi-youtube "></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="redes bi bi-linkedin "></i></a></li>
+                <li class="list-inline-item"><a href="https://www.facebook.com/?locale=es_LA" target="_blank"><i class="redes bi bi-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank"><i class="redes bi bi-instagram "></i></a></li>
+                <li class="list-inline-item"><a href="https://twitter.com/?lang=es" target="_blank"><i class="redes bi bi-twitter "></i></a></li>
+                <li class="list-inline-item"><a href="https://www.youtube.com/" target="_blank"><i class="redes bi bi-youtube "></i></a></li>
+                <li class="list-inline-item"><a href="https://ar.linkedin.com/" target="_blank"><i class="redes bi bi-linkedin "></i></a></li>
             </ul>
         </div>
         <hr class="my-4">
