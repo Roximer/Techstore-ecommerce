@@ -1,0 +1,64 @@
+*{ 
+ box-sizing: border-box; 
+ margin-top: 0%;
+ 
+ 
+}
+
+body{
+margin: 0; 
+background: #EE82EE;
+
+}
+ 
+h1,h2,h3{
+text-align: center;
+padding-top: 0%;
+background:gray;
+}
+ 
+ img{
+    display: block;    
+    width:50px ; 
+    cursor: pointer; 
+}
+
+.container--slider{
+     margin: 150px;
+    position: relative; 
+    padding: auto;
+}
+#carouselExampleInterval{
+  height: 200%; 
+margin-top: 0%;  
+}
+
+/*.card{
+ width: 25; 
+ height: auto;  
+} */
+
+.logo{
+width: 100px;
+height: 100px;
+filter: brightness(1,1);
+mix-blend-mode: multiply;
+}
+    
+.video{
+  overflow: hidden;
+  padding-bottom: 400px;
+  position: relative;
+  height: 300px;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+}
+
+.video iframe{
+  left:0;
+  top: 0;
+  height:100%;
+  width: 100%;
+  position: absolute;
+}
