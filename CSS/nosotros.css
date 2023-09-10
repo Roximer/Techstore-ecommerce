@@ -1,0 +1,21 @@
+.fondo{
+    background-color: rgb(186, 120, 205);
+   
+}
+
+/* para redondear foto */
+.img-foto{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%
+    
+
+}
+
+
+.contenedor-img{
+    width:200px;
+    height: 200px;
+    
+}
+
