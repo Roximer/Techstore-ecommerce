@@ -137,13 +137,10 @@ window.buscadorProd = () => {
 cargar_tabla();
 
 // trabajando el cierre de sesion de admin.
-
-
 const cerrarSesion = ()=>{
     localStorage.removeItem('auth');
     location.replace('/')
 }
-
 btnClose.addEventListener('click',cerrarSesion);
 
 // mensajes footer:
