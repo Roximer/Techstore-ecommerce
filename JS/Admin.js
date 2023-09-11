@@ -149,23 +149,3 @@ window.arrepentimiento=()=>{
     confirm('Seguro que te arrepientes??🤔');
 }
 
-// guardar productos y mostrar en cards:
-let contenedor_cards = document.getElementById('contenedorCards');
-const creando_cards = ()=>{
-    productos.map((producto)=>{
-    let columna = document.createElement('div');
-    columna.className="col";
-    let tarjeta = `<div class="card h-100">
-    <img src=${producto.img} class="card-img-top" alt="${producto.nombre}>
-    <div class="card-body">
-    <h5 class="card-title fw-bold p-2 text-center text-danger-emphasis">${producto.nombre}</h5>
-    <p class="card-text p-2 text-center">${producto.descrip}</p>
-    </div>
-    </div>`
-    columna.innerHTML=tarjeta;
-    contenedor_cards.append(columna);
-    })
-}
-creando_cards();
-
-export {creando_cards};
