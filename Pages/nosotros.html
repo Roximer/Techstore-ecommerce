@@ -16,11 +16,77 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/CSS/nosotros.css">
     <link rel="stylesheet" href="/CSS/Admin.css">
+    <link rel="stylesheet" href="../CSS/navstyles.css">
   </head>
-  <body>
-    <header></header>
+  <body id="bodynosotros" >
+    <header>
+      <nav id="navNosotros" class="navbar navbar-expand-lg  mb-5 fixed-top justify-content-between ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+    
+            <img class="logo" src="../Assets/logosinfondo.png" >
+          </a>
+    
+          <button class="navbar-toggler" 
+                  type="button"
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" 
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+    
+              <li class="nav-item">
+                <a class="nav-link" href="#">INICIO</a>
+              </li>
+              <li class="nav-item">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      CATEGORIAS
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" id="gaming"href="#">Gaming</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" id="celulares"href="#">Celulares</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" id="informatica"href="#">Informática</a></li>
+                    </ul>
+                  </li>
+                <a class="nav-link" href="#">SOBRE NOSOTRAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">INICIA SESION</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">REGISTRATE</a>
+              </li>
+              </div>
+              </li>
+            </ul>
+    
+            
+    
+    
+            <form class="d-flex col-10 m-auto col-lg-4" id="form-buscador" role="search">
+                
+            <input class="form-control me-2" type="text" placeholder="Buscar producto" aria-label="Search" id="searchImput">
+            
+            <button class="btn btn-secondary" type="button" onclick="buscadorProd()"  id="button-addon2"><i class="bi bi-search"></i></button>
+            <ul id="resultList" class="results-List"> </ul>
+            <p id="noResults" class="no-results">No se encontraron resultados</p>
+        </form>
+    
+        </div>
+      </nav>  
+    
+      
+    </header>
 
-    <main class="fondo pb-4 pt-2">
+    <main class="fondo pb-4 ">
       <div class="container mt-5">
         <div class="row d-block">
           <div class="col text-center">
