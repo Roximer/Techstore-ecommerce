@@ -3,6 +3,11 @@
     background-color: #BA78CD;
     justify-content: space-between;
     overflow-x: hidden;
+   
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
     
     
 }
