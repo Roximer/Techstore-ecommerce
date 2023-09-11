@@ -1,12 +1,21 @@
+import { Producto,productos } from "./clases.js"
 
 
 
-const products = [
-    { nombre: "Celular", descripcion: "Descripción del Producto 1" },
-    { nombre: "Auricular", descripcion: "Descripción del Producto 2" },
-    { nombre: "Computadora", descripcion: "Descripción del Producto 3" },
+
+// let productos= [
+//     {nombre: "NOTEBOOK GAMER ASUS ROG ZEPHYRUS",categoria:"Gaming",img:"https://images.start.com.ar/GA401QC-K2105W-365.jpg",stock:"255",precio:"$ 1.599.999",codigo:"111",marca:"ASUS ROG ZEPHYRUS",descrip:"G14 14 RYZEN 7 GA401QC-K2105W 16GB 512SSD NVIDIA GEFORCE RTX 3050 W11"},
+//     {nombre: "NOTEBOOK GAMER ASUS ROG ZEPHYRUS",categoria:"Gaming",img:"https://images.start.com.ar/GA401QC-K2105W-365.jpg",stock:"255",precio:"$ 1.599.999",codigo:"111",marca:"ASUS ROG ZEPHYRUS",descrip:"G14 14 RYZEN 7 GA401QC-K2105W 16GB 512SSD NVIDIA GEFORCE RTX 3050 W11"},
+//     {nombre: "NOTEBOOK GAMER ASUS ROG ZEPHYRUS",categoria:"Gaming",img:"https://images.start.com.ar/GA401QC-K2105W-365.jpg",stock:"255",precio:"$ 1.599.999",codigo:"111",marca:"ASUS ROG ZEPHYRUS",descrip:"G14 14 RYZEN 7 GA401QC-K2105W 16GB 512SSD NVIDIA GEFORCE RTX 3050 W11"},
+//     {nombre: "NOTEBOOK GAMER ASUS ROG ZEPHYRUS",categoria:"Gaming",img:"https://images.start.com.ar/GA401QC-K2105W-365.jpg",stock:"255",precio:"$ 1.599.999",codigo:"111",marca:"ASUS ROG ZEPHYRUS",descrip:"G14 14 RYZEN 7 GA401QC-K2105W 16GB 512SSD NVIDIA GEFORCE RTX 3050 W11"}
+// ]
+
+const productos = [
+    { nombre: "Celular", descripcion: "Descripción del celular",marca:"samsung" },
+    { nombre: "Auricular", descripcion: "Descripción del auricular" , marca:"sony"},
+    { nombre: "Computadora", descripcion: "Descripción de la computadora", marca: "lenovo" },
     
-];
+]
 
 // capturar lo que se ingresa
 const searchInput= document.getElementById("searchInput")  
@@ -21,7 +30,7 @@ const noResults=document.getElementById("noResults")  //const para cuando no se 
 const handleSearch=()=>{
     const searchTerm= searchInput.value.toLowerCase()
 
-    const filteredProducts= products.filter((product)=>product.nombre.toLowerCase().startsWith(searchTerm))  //va mostrando los productos a medida que se va escribiendo
+    const filteredProducts= productos.filter((product)=>product.nombre.toLowerCase().startsWith(searchTerm))  //va mostrando los productos a medida que se va escribiendo
    
   
 
@@ -46,3 +55,8 @@ const handleSearch=()=>{
 }
 
 searchInput.addEventListener("input",handleSearch);
+ 
+// form-buscador.addEventListener("change",buscadorProd)
+
+
+
