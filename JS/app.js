@@ -13,18 +13,18 @@ let productos= JSON.parse(localStorage.getItem("productos")) || null;
         let tarjeta = `<div class="card h-100">
         <img src= ${producto.img}  class= "card-img-top " alt=${producto.nombre}>
         <div class="card-body">
-         <h5 class=" card-title">${producto.nombre}</h5>   
-         <p class= "car-text"> </p>
-         <a href="#" class="btn btn-primary">Ver mas</a>
-         <a href="#" class="btn btn-primary">Agregar</a>
+        <h5 class=" card-title">${producto.nombre}</h5>   
+        <p class= "car-text"> </p>
+        <a href="#" class="btn d-grid btn-primary">Ver más</a>
         </div>
         </div>` ;  
         col.innerHTML =tarjeta;
-        contenedorBlog.append(col);  
+        contenedorBlog.append(col);
     });
 };
-     
-        cargarTarjeta()
+    cargarTarjeta();
 
-  
+// document.getElementById('contenedorCards1').creando_cards();
+    
+
     
