@@ -1,8 +1,10 @@
-import { Producto,productos} from "./clases.js";
+//import { Producto,productos} from "./clases.js";
 
 let contenedorBlog= document.querySelector("#content-blog");
-//let sectionInicioSesion= document.querySelector("#linkInicioSesion");
+let sectionInicioSesion= document.querySelector("#linkInicioSesion");
 //let auth= JSON.parse(localStorage.getItem("auth")) || null;
+let productos= JSON.parse(localStorage.getItem("productos")) || null;
+
 
  const cargarTarjeta = ()=>{
     productos.map((producto)=>{
