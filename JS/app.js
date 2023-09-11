@@ -1,8 +1,9 @@
 import { Producto,productos} from "./clases.js";
-
+// import { creando_cards } from "./Admin.js";
 let contenedorBlog= document.querySelector("#content-blog");
 //let sectionInicioSesion= document.querySelector("#linkInicioSesion");
 //let auth= JSON.parse(localStorage.getItem("auth")) || null;
+
 
  const cargarTarjeta = ()=>{
     productos.map((producto)=>{
@@ -13,16 +14,16 @@ let contenedorBlog= document.querySelector("#content-blog");
         <div class="card-body">
         <h5 class=" card-title">${producto.nombre}</h5>   
         <p class= "car-text"> </p>
-        <a href="#" class="btn btn-primary">Ver mas</a>
-        <a href="#" class="btn btn-primary">Agregar</a>
+        <a href="#" class="btn d-grid btn-primary">Ver más</a>
         </div>
         </div>` ;  
         col.innerHTML =tarjeta;
-        contenedorBlog.append(col);  
+        contenedorBlog.append(col);
     });
 };
-     
-        cargarTarjeta()
+    cargarTarjeta();
 
-  
+// document.getElementById('contenedorCards1').creando_cards();
+    
+
     
