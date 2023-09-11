@@ -11,10 +11,10 @@ let contenedorBlog= document.querySelector("#content-blog");
         let tarjeta = `<div class="card h-100">
         <img src= ${producto.img}  class= "card-img-top " alt=${producto.nombre}>
         <div class="card-body">
-         <h5 class=" card-title">${producto.nombre}</h5>   
-         <p class= "car-text"> </p>
-         <a href="#" class="btn btn-primary">Ver mas</a>
-         <a href="#" class="btn btn-primary">Agregar</a>
+        <h5 class=" card-title">${producto.nombre}</h5>   
+        <p class= "car-text"> </p>
+        <a href="#" class="btn btn-primary">Ver mas</a>
+        <a href="#" class="btn btn-primary">Agregar</a>
         </div>
         </div>` ;  
         col.innerHTML =tarjeta;

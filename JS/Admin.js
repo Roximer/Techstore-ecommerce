@@ -3,7 +3,7 @@ import { Producto} from "./clases.js";
 const myModal =new bootstrap.Modal(document.getElementById('myModal'));
 
 
-let productos = JSON.parse(localStorage.getItem('productos'))||[] ;
+export let productos = JSON.parse(localStorage.getItem('productos'))||[] ;
 // localStorage.removeItem('productos');
 // localStorage.removeItem('users');
 let auth = JSON.parse(localStorage.getItem('auth')) || null;
@@ -20,10 +20,6 @@ if(!auth){
     mensaje.innerHTML=`<i class="bi bi-exclamation-triangle-fill"></i> No tienes accesso a esta página, haz click <a href="/Pages/login.html" class="alert-link">Aquí para iniciar sesión.</a>`
     contenido.append(mensaje);
 }
-
-
-
-
 window.guardar_datos = (event)=>{
     event.preventDefault();
     let nombre = document.getElementById('nombre').value;
