@@ -1,0 +1,17 @@
+*{ 
+box-sizing: border-box; 
+margin: 0;
+padding: 0;
+font-family:  'Prompt', sans-serif;
+}
+
+
+.img-Carrusel{
+  height: 500px;
+  
+}
+
+
+iframe{
+  height: 500px;
+}

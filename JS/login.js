@@ -25,4 +25,5 @@ const logIn = (event) =>{
     }
 }
 
-document.querySelector('form').addEventListener('submit',logIn)
+document.querySelector('form').addEventListener('submit',logIn);
+
