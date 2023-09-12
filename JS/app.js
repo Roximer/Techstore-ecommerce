@@ -1,3 +1,5 @@
+const d = document;
+
 //import { Producto,productos} from "./clases.js";
 
 let contenedorBlog= document.querySelector("#content-blog");
@@ -10,7 +12,7 @@ let productos= JSON.parse(localStorage.getItem("productos")) || null;
     productos.map((producto)=>{
         let col = document.createElement("div");
         col.classList = "col";
-        let tarjeta = `<div class="card h-100">
+        let tarjeta = `<div class="card h-100  filterC">
         <img src= ${producto.img}  class= "card-img-top " alt=${producto.nombre}>
         <div class="card-body">
          <h5 class=" card-title">${producto.nombre}</h5>   
@@ -25,6 +27,25 @@ let productos= JSON.parse(localStorage.getItem("productos")) || null;
 };
      
         cargarTarjeta()
+
+
+        // function filtroTarjeta(input, selector) {
+        //     d.addEventListener("keyup", (e) => {
+        //       if (e.target.matches(input)) {
+        //         // console.log(e.key)
+        //         d.querySelectorAll(selector).forEach((elemento) =>
+        //           elemento.textContent.toLowerCase().includes(e.target.value)
+        //             ? elemento.classList.remove("filterCardP")
+        //             : elemento.classList.add("filterCardP")
+        //         );
+        //       }
+        //     });
+        //   }
+
+        //   filtroTarjeta(".inputFilterCard", ".filterC");
+
+
+     
 
   
     
