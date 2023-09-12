@@ -15,6 +15,55 @@
 <body>
     
 
+<nav class="navbar navbar-expand-lg bg-#BA78CD  mb-5 fixed-top justify-content-between ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">
+        <img class="logo" src="../Assets/logosinfondo.png" >
+      </a>
+      <button class="navbar-toggler" 
+              type="button"
+              data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item d-flex justify-content-between">
+            <a class="nav-link" href="#">INICIO</a>
+          </li>
+            <li>
+            <a class="nav-link" href="#">SOBRE NOSOTRAS</a>
+          </li>
+          </div>
+          </li>
+        </ul>
+      <form class="col-10 m-auto col-lg-4 " id="form-buscador-inicio" >
+        <div class=" input-group ">
+            <input type="input" 
+            class="form-control" 
+            id="buscador"
+            name="busq"
+            placeholder="Buscar producto" 
+            aria-label="Recipient's username" 
+            aria-describedby="button-addon2">
+            <button class="btn btn-secondary" 
+            type="button" 
+            onclick="buscadorProdInicio()" 
+            id="button-addon2"><i class="bi bi-search"></i></button>
+          </div>
+    </form> 
+    <div class="nav-item">
+    <button type="button" class="btn btn-secondary ms-2"> <a class="nav-link" href="iniciarsesion"><i class="bi bi-person-circle"></i></a></button>
+  </div>
+    </div>
+  </nav>  
+
+  
+    
+
 
 
 
@@ -22,6 +71,6 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
     crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
-    <script type="module" src="../JS/nav.js"></script>
+    <script src="/JS/nav.js"></script>
 </body>
 </html> 
