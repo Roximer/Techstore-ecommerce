@@ -33,9 +33,9 @@ let productoLinks = document.querySelectorAll(".producto-link");
 let detalleProducto = document.getElementById("detalle-producto");
 // Función para mostrar los detalles de un producto
 
-function mostrarDetalleProducto(id) {
+function mostrarDetalleProducto(index) {
     // Busca el producto en el arreglo por su código
-    let producto = productos.find((p) => p.codigo === id);
+    let producto = productos.find((p) => p.codigo === index);
         if (producto){
         // contenido HTML para mostrar los detalles del producto
             const contenidoHTML =`
