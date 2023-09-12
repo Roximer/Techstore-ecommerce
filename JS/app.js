@@ -15,7 +15,7 @@ let productos= JSON.parse(localStorage.getItem("productos")) || null;
         <div class="card-body">
         <h5 class=" card-title">${producto.nombre}</h5>   
         <p class= "car-text"> </p>
-        <a href="#" class="btn d-grid btn-primary">Ver más</a>
+        <a href="#" class="btn d-grid  btn-primary">Ver más</a>
         </div>
         </div>` ;  
         col.innerHTML =tarjeta;
