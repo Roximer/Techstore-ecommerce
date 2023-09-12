@@ -50,7 +50,10 @@
 let productos= JSON.parse(localStorage.getItem("productos")) || null;
 
 window.buscadorProdInicio =()=> {
+
+
     let buscar = document.querySelector("#buscadorIn").value;
+
     if (buscar) {
         let coincidencias = productos.filter((product) => {
             return (

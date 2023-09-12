@@ -105,7 +105,7 @@ window.actualizarProducto = (event)=>{
 }
 
 
-window.buscadorProd = () => {
+window.buscadorProd =()=> {
     let buscar = document.querySelector("#buscador").value;
     if (buscar) {
         let coincidencias = productos.filter((product) => {
