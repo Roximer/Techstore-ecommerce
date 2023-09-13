@@ -1,4 +1,4 @@
-//import { Producto,productos} from "./clases.js";
+
 
 let contenedorBlog= document.querySelector("#content-blog");
 let sectionInicioSesion= document.querySelector("#linkInicioSesion");

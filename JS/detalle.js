@@ -33,18 +33,18 @@
 // let detalleProducto = document.getElementById("detalle-producto");
 // Función para mostrar los detalles de un producto
 
-// function mostrarDetalleProducto(id) {
-//     // Busca el producto en el arreglo por su código
-//     let producto = productos.find((p) => p.codigo === id);
-//         if (producto){
-//         // contenido HTML para mostrar los detalles del producto
-//             const contenidoHTML =`
-//             <div>
-//                 <img src="${producto.imagen}" class="img-fluid rounded-start" alt="${producto.nombre}">
-//             </div>
-//             <div>
-//                 <div class="card-body">
-//                 <h1 class="card-title">${producto.nombre}</h1>
+function mostrarDetalleProducto(index) {
+    // Busca el producto en el arreglo por su código
+    let producto = productos.find((p) => p.codigo === index);
+        if (producto){
+        // contenido HTML para mostrar los detalles del producto
+            const contenidoHTML =`
+            <div>
+                <img src="${producto.imagen}" class="img-fluid rounded-start" alt="${producto.nombre}">
+            </div>
+            <div>
+                <div class="card-body">
+                <h1 class="card-title">${producto.nombre}</h1>
                 
 //                 <h3 class="card-text">${producto.precio}</h3>
 //                 <p class="card-text">${producto.descripcion}</p>
