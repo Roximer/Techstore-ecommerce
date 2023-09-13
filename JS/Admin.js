@@ -15,7 +15,7 @@ if(!auth){
     btnClose.className="d-none";
     contenido.innerHTML="";
     let mensaje = document.createElement('div');
-    mensaje.classList = "alert alert-danger pt-5 mt-4";
+    mensaje.classList = "alert alert-info pt-5 mt-4";
     mensaje.role = "alert";
     mensaje.innerHTML=`<i class="bi bi-exclamation-triangle-fill"></i> No tienes accesso a esta página, haz click <a href="/Pages/login.html" class="alert-link">Aquí para iniciar sesión.</a>`
     contenido.append(mensaje);
@@ -129,21 +129,25 @@ window.buscadorProd =()=> {
 };
 
 
-// myModal.show();
 cargar_tabla();
 
-// trabajando el cierre de sesion de admin.
+
 const cerrarSesion = ()=>{
     localStorage.removeItem('auth');
     location.replace('/')
 }
 btnClose.addEventListener('click',cerrarSesion);
 
-// mensajes footer:
-window.suscrip =(event)=>{
+
+let inputSusc=document.querySelector('#inputSuscrip');
+let formSuscrip=document.getElementById('suscrip');
+const suscripcion =(event)=>{
     event.preventDefault();
-    alert ('Gracias por suscribirte 😊')
+    const email = inputSusc.value.trim();
+        alert(`Gracias por suscribirte con el correo electrónico: ${email}`);
+        formSuscrip.reset();
 }
+formSuscrip.addEventListener('submit',suscripcion);
 
 window.arrepentimiento=()=>{
     confirm('Seguro que te arrepientes??🤔');

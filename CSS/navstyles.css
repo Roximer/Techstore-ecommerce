@@ -1,47 +1,25 @@
-.navbar{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Prompt', sans-serif;
+}
 
-    background-color: #BA78CD;
-    justify-content: space-between;
-    overflow-x: hidden;
-   
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    
-    
+.elNav{
+    background: #cc2b5e;  
+    background: -webkit-linear-gradient(to bottom, #cd88e4, #cc2b5e);  
+    background: linear-gradient(to bottom, #cd88e4, #cc2b5e);
     
 }
 
-.logo{
 
+
+
+.logoNav{
     height: 40%;
     width:40%;
 }
 
-.footer{
-    background-color: #BA78CD;
-
-    justify-content:space-around;
-    text-align:center;
-    overflow-x: hidden;
-    height:min-content;
-}
-
-.logo-footer img{
-    height: 100px;
-    width:100px;
-    
-}
-.fa-brands{
-    height:30px;
-    width: 30px;
-    justify-content: space-around;
-   
-}
 
 
-.no-results {
-font-size:20px;
-color: black;
-text-align:center;
-display:none;}
+
