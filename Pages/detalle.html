@@ -8,21 +8,144 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     
   </head>
-  <body>
-    <!--productos-->
-    <ul>
-      <li><a href="#" data-id="0" class="producto-link">iPhone SE 64 GB</a></li>
-      <li><a href="#" data-id="1" class="producto-link">iPhone 14 Pro Max</a></li>
-      <li><a href="#" data-id="2" class="producto-link">Beats Pill</a></li>
-      <!--productos-->
-  </ul>
+  <body id="bodyDetalle">
+    <header >
+      <nav class="navbar navbar-expand-lg   justify-content-between ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+    
+            <img class="logo" src="../Assets/logosinfondo.png" alt="logo">
+          </a>
+    
+          <button class="navbar-toggler" 
+                  type="button"
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" 
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+    
+              <li class="nav-item">
+                <a class="nav-link" href="#">INICIO</a>
+              </li>
+              <li class="nav-item">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      CATEGORIAS
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" id="gaming"href="#">Gaming</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" id="celulares"href="#">Celulares</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" id="informatica"href="#">Informática</a></li>
+                    </ul>
+                  </li>
+                <a class="nav-link" href="#">SOBRE NOSOTRAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">INICIA SESION</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">REGISTRATE</a>
+              </li>
+              </div>
+              </li>
+            </ul>
+    
+            
+    
+    
+            <form class="d-flex col-10 m-auto col-lg-4" id="form-buscador" role="search">
+                
+            <input class="form-control me-2" type="text" placeholder="Buscar producto" aria-label="Search" id="searchImput">
+            
+            <button class="btn btn-secondary" type="button" onclick="buscadorProd()"  id="button-addon2"><i class="bi bi-search"></i></button>
+            <ul id="resultList" class="results-List"> </ul>
+            <p id="noResults" class="no-results">No se encontraron resultados</p>
+        </form>
+    
+        </div>
+      </nav>  
+    
+    </header>
 
-  <div class="card mb-4" id="detalle-producto">
-    <div class="row g-0">
-      <button data-id="0" class="producto-link"> mostrar detalle</button>
-      <!--detalles del producto seleccionado -->
-    </div> 
+
+    <!--fin navbar-->
+
+<section>
+  <ul>
+    <li><a href="#" data-id="0" class="producto-link">iPhone SE 64 GB</a></li>
+    <li><a href="#" data-id="1" class="producto-link">iPhone 14 Pro Max</a></li>
+    <li><a href="#" data-id="2" class="producto-link">Beats Pill</a></li>
+</ul>
+
+<div class="card mb-4" id="detalle-producto">
+  <div class="row g-0">
+    <button data-id="0" class="producto-link"> mostrar detalle</button>
+    <!--detalles -->
+  </div> 
+</div>
+
+</section>
+
+<!-- inicio footer-->
+<footer class=" text-light pt-5 pb-4">
+  <div class="container  text-center text-md-start" >
+  <div class="row text-center text-md-start">
+      <div class="col-md-2 mx-auto mt-3">
+      <a href="#"><img src="/Assets/WhatsApp_Image_2023-08-25_at_10.11.22_PM-removebg-preview.png" alt="logo"></a>
+      </div>
+      <div class="col-md-3 mx-auto mt-3">
+          <h5 class="text-uppercase fw-bold mb-4">Contacto</h5>
+          <hr class="mb-4">
+          <p class="fs-5"><i class="bi bi-geo-alt-fill"></i> Avda Los Aromos 1091</p>
+          <p class="fs-5"><i class="bi bi-telephone-fill"></i> 0800-999-800</p>
+          <p class="fs-5"><i class="bi bi-envelope-fill"></i> www.techStore.com</p>
+          <button class="btn btn-danger my-3 fw-semibold">Boton de arrepentimiento</button>
+      </div>
+      <div class="col-md-3 mx-auto mt-3">
+          <h5 class="text-uppercase fw-bold mb-4 mt-2">newsletter</h5>
+          <hr class="mb-4">
+          <p class="fs-5 mb-2">¡Suscríbete para recibir nuestras ofertas!</p>
+          <form >
+              <input type="email" class="form-control my-4 "  placeholder="Ingresa tu email">
+              <div class="d-grid mt-4">
+                  <button class="btn btn-secondary fw-semibold">¡suscribete!</button>
+              </div>
+          </form>
+      </div>
+      <div class="col-md-3 mx-auto mt-3">
+          <h5 class="text-uppercase fw-bold mb-4 mt-2">Más buscados</h5>
+          <hr class="mb-4">
+          <p><a href="#" class="masBusk2 fs-5 text-light">celulares</a></p>
+          <p><a href="#" class="masBusk2 fs-5 text-light">informatica</a></p>
+          <p><a href="#" class="masBusk2 fs-5 text-light">gaming</a></p>
+      </div>
   </div>
+  <hr class="my-5">
+  <div class="row text-center">
+      <ul class="list-unstyled  list-inline">
+          <li class="list-inline-item"><a href="#"><i class="redes bi bi-facebook"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class=" redes bi bi-instagram "></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="redes bi bi-twitter "></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="redes bi bi-youtube "></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="redes bi bi-linkedin "></i></a></li>
+      </ul>
+  </div>
+  <hr class="my-4">
+  <div class="row text-center">
+      <p>&#169 copyright 2023.TechStore | <a href="#" class="masBusk2 text-light">Términos y condiciones</a> | <a href="#" class="masBusk2 text-light">Políticas de privacidad</a> </p>
+  </div>
+  </div>
+</footer>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="/JS/detalle.js"></script>
   </body>
