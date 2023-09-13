@@ -33,28 +33,28 @@
 // let detalleProducto = document.getElementById("detalle-producto");
 // Función para mostrar los detalles de un producto
 
-function mostrarDetalleProducto(index) {
-    // Busca el producto en el arreglo por su código
-    let producto = productos.find((p) => p.codigo === index);
-        if (producto){
-        // contenido HTML para mostrar los detalles del producto
-            const contenidoHTML =`
-            <div>
-                <img src="${producto.imagen}" class="img-fluid rounded-start" alt="${producto.nombre}">
-            </div>
-            <div>
-                <div class="card-body">
-                <h1 class="card-title">${producto.nombre}</h1>
-                
-//                 <h3 class="card-text">${producto.precio}</h3>
-//                 <p class="card-text">${producto.descripcion}</p>
-//                 <p class="card-text"><small class="text-body-secondary">codigo: ${producto.codigo}</small></p>
-//                 <p>Cantidad en Stock: ${producto.cantidadStock}</p>
-//                 <button type="button" class="btn-carrito" class="btn btn-primary btn-lg">añadir al carrito</button>
-//                 <button id="volver" type="button" class="btn-carrito" class="btn btn-primary btn-lg">Volver a los productos</button>
-                
+// function mostrarDetalleProducto(index) {
+//     // Busca el producto en el arreglo por su código
+//     let producto = productos.find((p) => p.codigo === index);
+//         if (producto){
+//         // contenido HTML para mostrar los detalles del producto
+//             const contenidoHTML =`
+//             <div>
+//                 <img src="${producto.imagen}" class="img-fluid rounded-start" alt="${producto.nombre}">
 //             </div>
-//             </div>`;
+//             <div>
+//                 <div class="card-body">
+//                 <h1 class="card-title">${producto.nombre}</h1>
+                
+// //                 <h3 class="card-text">${producto.precio}</h3>
+// //                 <p class="card-text">${producto.descripcion}</p>
+// //                 <p class="card-text"><small class="text-body-secondary">codigo: ${producto.codigo}</small></p>
+// //                 <p>Cantidad en Stock: ${producto.cantidadStock}</p>
+// //                 <button type="button" class="btn-carrito" class="btn btn-primary btn-lg">añadir al carrito</button>
+// //                 <button id="volver" type="button" class="btn-carrito" class="btn btn-primary btn-lg">Volver a los productos</button>
+                
+// //             </div>
+// //             </div>`;
 //            // Mostrar los detalles del producto
 //             detalleProducto.innerHTML = contenidoHTML;        
 //            //Evento al boton "Volver" para volver a todos productos
