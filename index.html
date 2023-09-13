@@ -8,6 +8,7 @@
     <title>TechStore | Inicio</title>
     <link rel="stylesheet" href="/CSS/Admin.css">
     <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/navstyles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,15 +16,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
   </head>
 
-  <body> 
+  <body id="bodyInicio"> 
     <header>
- 
+      <nav class="elNav navbar navbar-expand-lg  fixed-top justify-content-between">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+            <img class="logoNav" src="../Assets/logosinfondo.png" >
+          </a>
+          <button class="navbar-toggler" 
+                  type="button"
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" 
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active d-flex justify-content-between">
+                <a class="nav-link fw-bold text-light"  href="/index.html">INICIO</a>
+              </li>
+                <li>
+                <a class="nav-link fw-semibold text-light" href="/Pages/nosotros.html">SOBRE NOSOTRAS</a>
+              </li>
+              </div>
+              </li>
+            </ul>
+          <form class="col-10 m-auto col-lg-4 " id="form-buscador-inicio" >
+            <div class=" input-group ">
+                <input type="input" 
+                class="form-control" 
+                id="buscadorIn"
+                name="busq"
+                placeholder="Buscar producto" 
+                aria-label="Recipient's username" 
+                aria-describedby="button-addon2">
+                <button class="btn btn-secondary" 
+                type="button" 
+                onclick="buscadorProdInicio()" 
+                id="button-addon2"><i class="bi bi-search"></i></button>
+              </div>
+        </form> 
+        <div class="nav-item">
+        <button type="button" class="btn btn-light rounded-5 fw-bold ms-2"> <a class="nav-link" href="/Pages/login.html"><i class="bi bi-person-circle"></i> Inicia sesión</a></button>
+      </div>
+        </div>
+      </nav>  
     </header>
-    
     <main>
-    <section>
-        
-        <div id="carouselExample" class="carousel slide mb-5">
+    <section class="sectCarr">
+        <div id="carouselExample" class="carousel  slide mb-5">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg" class="img-Carrusel d-block w-100" alt="smart">
@@ -69,7 +112,7 @@
       <div class="container  text-center text-md-start" >
       <div class="row text-center text-md-start">
           <div class="col-md-2 mx-auto mt-3">
-          <a href="#"><img src="/Assets/WhatsApp_Image_2023-08-25_at_10.11.22_PM-removebg-preview.png" alt="logo"></a>
+          <a href="/index.html"><img src="/Assets/WhatsApp_Image_2023-08-25_at_10.11.22_PM-removebg-preview.png" alt="logo"></a>
           </div>
           <div class="col-md-3 mx-auto mt-3">
               <h5 class="text-uppercase fw-bold mb-4">Contacto</h5>
@@ -83,8 +126,8 @@
               <h5 class="text-uppercase fw-bold mb-4 mt-3">newsletter</h5>
               <hr class="mb-4">
               <p class="fs-5 mb-2">¡Suscríbete para recibir nuestras ofertas!</p>
-              <form onclick="suscrip(event)">
-                  <input type="email" class="form-control mt-4"  placeholder="Ingresa tu email">
+              <form id="suscrip">
+                  <input type="email" id="inputSuscrip" class="form-control mt-4" required placeholder="Ingresa tu email">
                   <div class="d-grid mt-2">
                       <button class="btn btn-secondary fw-semibold">¡suscribete!</button>
                   </div>
@@ -93,9 +136,9 @@
           <div class="col-md-3 mx-auto mt-3">
               <h5 class="text-uppercase fw-bold mb-4 mt-2">Más buscados</h5>
               <hr class="mb-4">
-              <p><a href="#" class="masBusk2 fs-5 text-light">celulares</a></p>
-              <p><a href="#" class="masBusk2 fs-5 text-light">informatica</a></p>
-              <p><a href="#" class="masBusk2 fs-5 text-light">gaming</a></p>
+              <p><a href="/Pages/error404.html" class="masBusk2 fs-5 text-light">celulares</a></p>
+              <p><a href="/Pages/error404.html" class="masBusk2 fs-5 text-light">informatica</a></p>
+              <p><a href="/Pages/error404.html" class="masBusk2 fs-5 text-light">gaming</a></p>
           </div>
       </div>
       <hr class="my-5">
@@ -117,8 +160,9 @@
 
     <script src="./JS/app.js" type="module"> </script>
     <script src="/JS/nosotros.js"></script>
-    <script src="./JS/detalle.js"></script>
-    <!-- <script src="/JS/Admin.js"></script> -->
+
+    <script src="/JS/nav.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
   </html>

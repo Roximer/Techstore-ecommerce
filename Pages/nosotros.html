@@ -4,12 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TechStore | Nosotros</title>
-    <title>TechStore</title>
     <link rel="stylesheet" href="/CSS/Admin.css">
     <link rel="stylesheet" href="/CSS/navstyles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,22 +19,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/CSS/nosotros.css">
-    <link rel="stylesheet" href="/CSS/Admin.css">
   </head>
 
   <body class="fondo">
-    <header></header>
-
-
-  <body>
-    <header >
-      <nav class="navbar navbar-expand-lg navbar-color  justify-content-between ">
+    <header>
+      <nav class="elNav navbar navbar-expand-lg  fixed-top justify-content-between">
         <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html">
-    
-            <img class="logo" src="../Assets/logosinfondo.png" >
+          <a class="navbar-brand" href="/index.html">
+            <img class="logoNav" src="../Assets/logosinfondo.png" >
           </a>
-    
           <button class="navbar-toggler" 
                   type="button"
                   data-bs-toggle="collapse" 
@@ -48,52 +39,39 @@
           </button>
           <div class="collapse navbar-collapse  " id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              
-    
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html">INICIO</a>
+              <li class="nav-item active d-flex justify-content-between">
+                <a class="nav-link fw-bold text-light"  href="/index.html">INICIO</a>
               </li>
-              <li class="nav-item">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      CATEGORIAS
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" id="gaming"href="#">Gaming</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" id="celulares"href="#">Celulares</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" id="informatica"href="#">Informática</a></li>
-                    </ul>
-                  </li>
-                <a class="nav-link" href="#">SOBRE NOSOTRAS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">INICIA SESION</a>
-            </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">REGISTRATE</a>
+                <li>
+                <a class="nav-link fw-semibold text-light" href="/Pages/nosotros.html">SOBRE NOSOTRAS</a>
               </li>
               </div>
               </li>
             </ul>
-    
-            
-    
-    
-            <form class="d-flex col-10 m-auto col-lg-4" id="form-buscador" role="search">
-                
-            <input class="form-control me-2" type="text" placeholder="Buscar producto" aria-label="Search" id="searchImput">
-            
-            <button class="btn btn-secondary" type="button" onclick="buscadorProd()"  id="button-addon2"><i class="bi bi-search"></i></button>
-            <ul id="resultList" class="results-List"> </ul>
-            <p id="noResults" class="no-results">No se encontraron resultados</p>
-        </form>
-    
+          <form class="col-10 m-auto col-lg-4 " id="form-buscador-inicio" >
+            <div class=" input-group ">
+                <input type="input" 
+                class="form-control" 
+                id="buscadorIn"
+                name="busq"
+                placeholder="Buscar producto" 
+                aria-label="Recipient's username" 
+                aria-describedby="button-addon2">
+                <button class="btn btn-secondary" 
+                type="button" 
+                onclick="buscadorProdInicio()" 
+                id="button-addon2"><i class="bi bi-search"></i></button>
+              </div>
+        </form> 
+        <div class="nav-item">
+        <button type="button" class="btn btn-light fw-bold rounded-5 ms-2"> <a class="nav-link" href="/Pages/login.html"><i class="bi bi-person-circle"></i> Inicia sesión</a></button>
+      </div>
         </div>
       </nav>  
-    
     </header>
+
+
+  
 
     <main class=" pb-4 pt-2">
       <div class="container mt-5">
@@ -197,8 +175,8 @@
               <h5 class="text-uppercase fw-bold mb-4 mt-2">newsletter</h5>
               <hr class="mb-4">
               <p class="fs-5 mb-2">¡Suscríbete para recibir nuestras ofertas!</p>
-              <form onclick="suscrip(event)">
-                <input type="email" class="form-control mt-4"  placeholder="Ingresa tu email">
+              <form id="suscrip">
+                <input type="email" class="form-control mt-4" id="inputSuscrip" required  placeholder="Ingresa tu email">
                 <div class="d-grid mt-2">
                     <button class="btn btn-secondary fw-semibold">¡suscribete!</button>
                 </div>
@@ -207,9 +185,9 @@
           <div class="col-md-3 mx-auto mt-3">
               <h5 class="text-uppercase fw-bold mb-4 mt-2">Más buscados</h5>
               <hr class="mb-4">
-              <p><a href="#" class="masBusk2 fs-5 text-light">celulares</a></p>
-              <p><a href="#" class="masBusk2 fs-5 text-light">informatica</a></p>
-              <p><a href="#" class="masBusk2 fs-5 text-light">gaming</a></p>
+              <p><a href="/Pages/error404.html" class="masBusk2 fs-5 text-light">celulares</a></p>
+              <p><a href="/Pages/error404.html" class="masBusk2 fs-5 text-light">informatica</a></p>
+              <p><a href="/Pages/error404.html" class="masBusk2 fs-5 text-light">gaming</a></p>
           </div>
       </div>
       <hr class="my-5">
@@ -237,5 +215,6 @@
       crossorigin="anonymous"
     ></script>
     <script  src="/JS/nosotros.js"></script>
+    <script src="/JS/nav.js"></script>
   </body>
 </html>

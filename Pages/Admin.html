@@ -93,31 +93,31 @@
                                             <label class="fw-bold ms-2">nombre</label>
                                         </div>
                                         <div class="form-floating col-12 col-lg-6 mb-3">
-                                            <input type="text" class="form-control" minlength="5" maxlength="20"
+                                            <input type="text" class="form-control" minlength="5" maxlength="25"
                                                 id="categoria" required>
                                             <label class="fw-bold ms-2">categoría</label>
                                         </div>
                                         <div class="form-floating col-12 col-lg-6 mb-3">
-                                            <input type="text" class="form-control" id="img" required>
+                                            <input type="text" class="form-control" id="img" maxlength="200" required>
                                             <label class="fw-bold ms-2">imagen</label>
                                         </div>
                                         <div class="form-floating col-12 col-lg-3 mb-3">
-                                            <input type="number" class="form-control" min="1" max="1000" id="stock"
+                                            <input type="number" class="form-control" min="1" max="100" id="stock"
                                                 required>
                                             <label class="fw-bold ms-2">stock</label>
                                         </div>
                                         <div class="form-floating col-12 col-lg-3 mb-3">
-                                            <input type="text" minlength="4" maxlength="50" class="form-control"
+                                            <input type="number" step="any" min="4" max="100000" class="form-control"
                                                 id="precio" required>
                                             <label class="fw-bold ms-2">precio</label>
                                         </div>
                                         <div class="form-floating col-12 col-lg-6 mb-3">
-                                            <input type="number" min="001" max="100" class="form-control"
+                                            <input type="number" min="10" max="100" class="form-control"
                                                 id="codigo" required>
                                             <label class="fw-bold ms-2">código</label>
                                         </div>
                                         <div class="form-floating col-12 mb-3 col-lg-6 column-gap-lg-4 ">
-                                            <input type="text" class="form-control" minlength="2" maxlength="20"
+                                            <input type="text" class="form-control" minlength="2" maxlength="25"
                                                 id="marca" required>
                                             <label class="fw-bold ms-2">marca</label>
                                         </div>
@@ -221,7 +221,7 @@
         <div class="container  text-center text-md-start" >
         <div class="row text-center text-md-start">
             <div class="col-md-2 mx-auto mt-3">
-            <a href="#"><img src="/Assets/WhatsApp_Image_2023-08-25_at_10.11.22_PM-removebg-preview.png" alt="logo"></a>
+            <a href="/index.html"><img src="/Assets/WhatsApp_Image_2023-08-25_at_10.11.22_PM-removebg-preview.png" alt="logo"></a>
             </div>
             <div class="col-md-3 mx-auto mt-3">
                 <h5 class="text-uppercase fw-bold mb-4">Contacto</h5>
@@ -235,8 +235,8 @@
                 <h5 class="text-uppercase fw-bold mb-4 mt-3">newsletter</h5>
                 <hr class="mb-4">
                 <p class="fs-5 mb-2">¡Suscríbete para recibir nuestras ofertas!</p>
-                <form onclick="suscrip(event)">
-                    <input type="email" class="form-control mt-4"  placeholder="Ingresa tu email">
+                <form id="suscrip">
+                    <input type="email" id="inputSuscrip" required class="form-control mt-4"  placeholder="Ingresa tu email">
                     <div class="d-grid mt-2">
                         <button class="btn btn-secondary fw-semibold">¡suscribete!</button>
                     </div>
@@ -245,9 +245,9 @@
             <div class="col-md-3 mx-auto mt-3">
                 <h5 class="text-uppercase fw-bold mb-4 mt-2">Más buscados</h5>
                 <hr class="mb-4">
-                <p><a href="#" class="masBusk2 fs-5 text-light">celulares</a></p>
-                <p><a href="#" class="masBusk2 fs-5 text-light">informatica</a></p>
-                <p><a href="#" class="masBusk2 fs-5 text-light">gaming</a></p>
+                <p><a href="/Pages/error404.html" class="masBusk2 fs-5 text-light">celulares</a></p>
+                <p><a href="/Pages/error404.html" class="masBusk2 fs-5 text-light">informatica</a></p>
+                <p><a href="/Pages/error404.html" class="masBusk2 fs-5 text-light">gaming</a></p>
             </div>
         </div>
         <hr class="my-5">
@@ -262,7 +262,7 @@
         </div>
         <hr class="my-4">
         <div class="row text-center">
-            <p>&#169 copyright 2023.TechStore | <a href="#" class="masBusk2 text-light">Términos y condiciones</a> | <a href="#" class="masBusk2 text-light">Políticas de privacidad</a> </p>
+            <p>&#169 copyright 2023.TechStore | <a href="/Pages/error404.html" class="masBusk2 text-light">Términos y condiciones</a> | <a href="/Pages/error404.html" class="masBusk2 text-light">Políticas de privacidad</a> </p>
         </div>
         </div>
     </footer>
