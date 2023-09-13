@@ -1,3 +1,4 @@
+
 let contFoto = document.getElementById('contFoto');
 
 let productos= JSON.parse(localStorage.getItem("productos")) || null;
