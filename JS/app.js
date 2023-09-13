@@ -7,6 +7,7 @@ let productos= JSON.parse(localStorage.getItem("productos")) || null;
 
 
  const cargarTarjeta = ()=>{
+
     productos.map((producto,index)=>{
         let col = document.createElement("div");
         col.classList = "col";
@@ -15,7 +16,9 @@ let productos= JSON.parse(localStorage.getItem("productos")) || null;
         <div class="card-body">
         <h5 class=" card-title">${producto.nombre}</h5>   
         <p class= "car-text"> </p>
+
         <a href="/Pages/detalle.html?index=${index}" class="btn d-grid btn-primary">Ver más</a>
+
         </div>
         </div>` ;  
         col.innerHTML =tarjeta;
